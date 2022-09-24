@@ -169,37 +169,37 @@ var numCursorImg = Math.floor(Math.random() * 11);
 let cursorImg;
 switch (numCursorImg) {
   case 0:
-    cursorImg = "url('images/cake0.png'), auto";
+    cursorImg = "url('cake0.png'), auto";
     break;
   case 1:
-    cursorImg = "url('images/cake1.png'), auto";
+    cursorImg = "url('cake1.png'), auto";
     break;
   case 2:
-    cursorImg = "url('images/cake2.png'), auto";
+    cursorImg = "url('cake2.png'), auto";
     break;
   case 3:
-    cursorImg = "url('images/cake3.png'), auto";
+    cursorImg = "url('cake3.png'), auto";
     break;
   case 4:
-    cursorImg = "url('images/cake4.png'), auto";
+    cursorImg = "url('cake4.png'), auto";
     break;
   case 5:
-    cursorImg = "url('images/cake5.png'), auto";
+    cursorImg = "url('cake5.png'), auto";
     break;
   case 6:
-    cursorImg = "url('images/cake6.png'), auto";
+    cursorImg = "url('cake6.png'), auto";
     break;
   case 7:
-    cursorImg = "url('images/cake7.png'), auto";
+    cursorImg = "url('cake7.png'), auto";
     break;
   case 8:
-    cursorImg = "url('images/cake8.png'), auto";
+    cursorImg = "url('cake8.png'), auto";
     break;
   case 9:
-    cursorImg = "url('images/cake9.png'), auto";
+    cursorImg = "url('cake9.png'), auto";
     break;
   case 10:
-    cursorImg = "url('images/cake10.png'), auto";
+    cursorImg = "url('cake10.png'), auto";
 }
 var list, index;
 list = document.getElementsByClassName("cursor");
