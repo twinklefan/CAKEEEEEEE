@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="cursor">
+
 <head>
   <meta charset="utf-8">
-  <title>CAKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</title>
+  <title>New Tab</title>
+  <link rel="shortcut icon" href="images/chrome2.png">
+  <link href="https://fonts.googleapis.com/css?family=K2D|Grandstander" rel="stylesheet">
   <style media="screen">
     html {
-      cursor: url("cake0.png"), auto;
+      cursor: url("images/cake0.png"), auto;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+      overflow: hidden;
     }
+
     body {
       background-color: #b6d4aa;
       margin: 0;
@@ -14,6 +25,21 @@
       height: 100%;
       padding: 0;
     }
+
+    h1 {
+      /* font-family: 'Marmelad'; */
+      font-family: 'K2D';
+      font-family: cursive;
+      text-shadow: 2px 2px 3px grey;
+      /* 3px 3px 5px black; */
+      font-size: 4.5rem;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 43%;
+    }
+
     .eye {
       background-color: #FFF;
       width: 300px;
@@ -22,26 +48,66 @@
       position: absolute;
       left: 50%;
       margin-left: -100px;
-      top: 50%;
+      top: 30%;
       margin-top: -100px;
       overflow: hidden;
     }
+
     .pupil {
       background-color: #000;
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       position: absolute;
       left: 50%;
-      top: 50%;
+      top: 45%;
       margin-left: -25px;
       margin-top: -25px;
     }
-    .eye1 {
-      margin-left: -325px;
+
+    .eye1{
+      margin-left: -375px;
     }
+
     .eye2 {
-      margin-left: 125px;
+      margin-left: 75px;
+    }
+
+    #mouth {
+      position: absolute;
+      background-color: black;
+      width: 230px;
+      height: 90px;
+      border-radius: 7px 7px 100px 100px;
+      top: 64%;
+      left: 41%;
+      transition: 1.5s;
+    }
+
+    #mouth:hover {
+      height: 10px;
+      transition: 1.5s;
+      cursor: none;
+    }
+
+    .closed {
+      width: 240px;
+      height: 120px;
+      background-color: transparent;
+      border-top-left-radius: 140px; /* 100px of height + 10px of border */
+      border-top-right-radius: 140px; /* 100px of height + 10px of border */
+      border: 20px solid black;
+      border-bottom: 0;
+      position: absolute;
+      z-index: -1;
+      top:18%;
+      left: 30%;
+    }
+    .closed1 {
+      margin-left: 340px;
+    }
+    .closed2 {
+      margin-left: -110px;
     }
   </style>
 </head>
@@ -49,15 +115,30 @@
 <body>
 
   <div>
-    <div class="eye eye1">
-      <div class="pupil"></div>
+
+    <div class="closed closed1"></div>
+    <div class="closed closed2"></div>
+
+    <div id="eyes">
+      <div class="eye eye1">
+        <div class="pupil"></div>
+      </div>
+
+
+      <div class="eye eye2">
+        <div class="pupil"></div>
+      </div>
     </div>
 
-    <div class="eye eye2">
-      <div class="pupil"></div>
-    </div>
+    <div id="mouth"></div>
+
+    <center>
+      <h1 id="h1">Feed me</h1>
+    </center>
+
   </div>
 
   <script src="cake.js" charset="utf-8"></script>
 </body>
+
 </html>
