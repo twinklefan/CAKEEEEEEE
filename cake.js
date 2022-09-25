@@ -60,9 +60,11 @@ var handleResize = function() {
 }
 window.addEventListener('mousemove', handleMouseMove)
 window.addEventListener('resize', handleResize)
-
+// END OF ALL MOUSE MOVEMENT STUFF
+//
 // BACKGROUND COLOUR
 var numBgColor = Math.floor(Math.random() * 32);
+// var numBgColor = 1;
 let bgColor;
 switch (numBgColor) {
   case 0:
@@ -162,6 +164,7 @@ switch (numBgColor) {
     bgColor = "DEFFC4";
 }
 document.body.style.backgroundColor = '#' + bgColor;
+// END BACKGROUND COLOUR
 
 //CURSOR IMAGE
 var numCursorImg = Math.floor(Math.random() * 11);
@@ -169,40 +172,62 @@ var numCursorImg = Math.floor(Math.random() * 11);
 let cursorImg;
 switch (numCursorImg) {
   case 0:
-    cursorImg = "url('cake0.png'), auto";
+    cursorImg = "url('images/cake0.png'), auto";
     break;
   case 1:
-    cursorImg = "url('cake1.png'), auto";
+    cursorImg = "url('images/cake1.png'), auto";
     break;
   case 2:
-    cursorImg = "url('cake2.png'), auto";
+    cursorImg = "url('images/cake2.png'), auto";
     break;
   case 3:
-    cursorImg = "url('cake3.png'), auto";
+    cursorImg = "url('images/cake3.png'), auto";
     break;
   case 4:
-    cursorImg = "url('cake4.png'), auto";
+    cursorImg = "url('images/cake4.png'), auto";
     break;
   case 5:
-    cursorImg = "url('cake5.png'), auto";
+    cursorImg = "url('images/cake5.png'), auto";
     break;
   case 6:
-    cursorImg = "url('cake6.png'), auto";
+    cursorImg = "url('images/cake6.png'), auto";
     break;
   case 7:
-    cursorImg = "url('cake7.png'), auto";
+    cursorImg = "url('images/cake7.png'), auto";
     break;
   case 8:
-    cursorImg = "url('cake8.png'), auto";
+    cursorImg = "url('images/cake8.png'), auto";
     break;
   case 9:
-    cursorImg = "url('cake9.png'), auto";
+    cursorImg = "url('images/cake9.png'), auto";
     break;
   case 10:
-    cursorImg = "url('cake10.png'), auto";
+    cursorImg = "url('images/cake10.png'), auto";
 }
 var list, index;
 list = document.getElementsByClassName("cursor");
 for (index = 0; index < list.length; ++index) {
   list[index].setAttribute("style", "cursor: " + cursorImg + ";");
+}
+// END CURSOR IMAGE
+
+var eyes = document.getElementById('eyes');
+
+document.onmousedown = function() {
+  eyes.style.visibility = "hidden";
+  // 'Hidden' tant que le bouton de la souris est maintenu enfoncé
+}
+
+document.onmouseup = function() {
+  eyes.style.visibility = "visible";
+  document.getElementById("h1").innerHTML = "Feed me";
+  // 'Visible' si le bouton de la souris n'est plus enfoncé
+}
+
+// CHANGE H1 TEXT
+var changeTxt = document.getElementById("mouth");
+changeTxt.addEventListener("mouseout", changeTxtFunc, false);
+
+function changeTxtFunc() {
+  document.getElementById("h1").innerHTML = "Thank You!";
 }
